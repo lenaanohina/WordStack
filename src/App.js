@@ -1,19 +1,10 @@
 import "./App.css";
+import WordList from "./components/WordList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to "WordStack"</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WordList></WordList>
     </div>
   );
 }
