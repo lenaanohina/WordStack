@@ -47,3 +47,16 @@ const WordCard = ({ english, transcription, russian }) => {
 };
 
 export default WordCard;
+// const WordCard = ({ english, transcription, russian }) => {
+
+//   return (
+//     <button>Назад</button>
+//     <div className="card">
+//           <div className="card__item">{english}</div>
+//           <div className="card__item">{transcription}</div>
+//           <div className="card__item">{russian}</div>
+
+//     </div>
+//     <button>Вперёд</button>
+//   );
+// };

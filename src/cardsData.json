@@ -10,7 +10,7 @@
   {
     "id": "15272",
     "english": "dog",
-    "transcription": "[dɒg]",
+    "transcription": "[dɔːɡ]",
     "russian": "собака",
     "tags": "",
     "tags_json": "[\"\"]"
@@ -18,7 +18,7 @@
   {
     "id": "15274",
     "english": "money",
-    "transcription": "money",
+    "transcription": "['mʌnɪ]",
     "russian": "деньги",
     "tags": "",
     "tags_json": "[]"
@@ -26,7 +26,7 @@
   {
     "id": "15278",
     "english": "monkey",
-    "transcription": "[monkey]",
+    "transcription": "['mʌŋkɪ]",
     "russian": "обезьяна",
     "tags": "обезьяна",
     "tags_json": "[\"u043eu0431u0435u0437u044cu044fu043du0430\"]"
@@ -34,7 +34,7 @@
   {
     "id": "15279",
     "english": "orange",
-    "transcription": "[orange]",
+    "transcription": "['ɔːrɪndʒ]",
     "russian": "оранжевый",
     "tags": "оранжевый",
     "tags_json": "[\"u043eu0440u0430u043du0436u0435u0432u044bu0439\"]"
@@ -42,7 +42,7 @@
   {
     "id": "15281",
     "english": "lesson",
-    "transcription": "[lesson]",
+    "transcription": "['lesn]",
     "russian": "урок",
     "tags": "",
     "tags_json": "[]"
@@ -58,7 +58,7 @@
   {
     "id": "15289",
     "english": "cats",
-    "transcription": "[cats]",
+    "transcription": "['kæts]",
     "russian": "кошки",
     "tags": "",
     "tags_json": "[]"
@@ -66,17 +66,9 @@
   {
     "id": "15291",
     "english": "flower",
-    "transcription": "[flower]",
+    "transcription": "['flaʊər]",
     "russian": "цветок",
     "tags": "",
     "tags_json": "[]"
-  },
-  {
-    "id": "15293",
-    "english": "egg",
-    "transcription": "egg",
-    "russian": "яйцо",
-    "tags": "qertwy",
-    "tags_json": "[\"qertwy\"]"
   }
 ]
