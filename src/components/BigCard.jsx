@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./BigCard.jsx";
 import "../cardsData.json";
-import "./global.css";
+import style from "./wordCard.module.css";
 
 function BigCard({ cardsData }) {
   const [randomCard, setRandomCard] = useState(null);
@@ -23,9 +23,9 @@ function BigCard({ cardsData }) {
     translation = <p>{randomCard.russian}</p>;
   }
   return (
-    <div className="card__container">
+    <div className={style.container}>
       {randomCard && (
-        <div>
+        <div className={style.big}>
           <p>{randomCard.english}</p>
           <p>{randomCard.transcription}</p>
           {translation}

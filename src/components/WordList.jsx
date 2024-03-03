@@ -3,11 +3,11 @@
 import React from "react";
 import WordCard from "./WordCard";
 import cardsData from "../cardsData.json";
-import "./global.css";
+import style from "./wordCard.module.css";
 
 const WordList = () => {
   return (
-    <div className="card__container">
+    <div className={style.container}>
       {cardsData.map((card, id) => (
         <WordCard
           key={id}

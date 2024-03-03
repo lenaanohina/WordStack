@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import "./WordCard";
-import "./global.css";
 import styles from "./actionButtons.module.css";
+import style from "./wordCard.module.css";
 
 const WordCard = ({ english, transcription, russian }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -13,12 +13,12 @@ const WordCard = ({ english, transcription, russian }) => {
   };
 
   return (
-    <div className="card">
+    <div className={style.card}>
       {isEditing ? (
         <>
-          <input className="input__item" defaultValue={english} />
-          <input className="input__item" defaultValue={transcription} />
-          <input className="input__item" defaultValue={russian} />
+          <input className={style.input} defaultValue={english} />
+          <input className={style.input} defaultValue={transcription} />
+          <input className={style.input} defaultValue={russian} />
           <div className="btns">
             <button className={styles.btn_green}>Сохранить</button>
             <button
@@ -31,9 +31,9 @@ const WordCard = ({ english, transcription, russian }) => {
         </>
       ) : (
         <>
-          <div className="card__item">{english}</div>
-          <div className="card__item">{transcription}</div>
-          <div className="card__item">{russian}</div>
+          <div className={style.item}>{english}</div>
+          <div className={style.item}>{transcription}</div>
+          <div className={style.item}>{russian}</div>
           <div className="btns">
             <button className={styles.btn_blue} onClick={handleEditClick}>
               Изменить
