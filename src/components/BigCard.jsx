@@ -1,36 +1,31 @@
 import React, { useState, useEffect } from "react";
 import "./BigCard.jsx";
-import "../cardsData.json";
 import style from "./wordCard.module.css";
 
-function BigCard({ cardsData }) {
-  const [randomCard, setRandomCard] = useState(null);
+function BigCard({ card, resetShowTranslation }) {
+  const [showTranslation, setShowTranslation] = useState(false);
+
+  const handleClick = () => {
+    setShowTranslation(true);
+  };
+
+  let translation = showTranslation ? (
+    <p>{card.russian}</p>
+  ) : (
+    <button onClick={handleClick}>Перевод</button>
+  );
 
   useEffect(() => {
-    const getRandomCard = () => {
-      const randomIndex = Math.floor(Math.random() * cardsData.length);
-      setRandomCard(cardsData[randomIndex]);
-    };
+    if (resetShowTranslation) {
+      setShowTranslation(false);
+    }
+  }, [resetShowTranslation]);
 
-    getRandomCard();
-  }, [cardsData]);
-
-  const [showTranslation, setShowTranslation] = useState(false);
-  const handleClick = () => setShowTranslation(true);
-
-  let translation = <button onClick={handleClick}>Перевод</button>;
-  if (showTranslation) {
-    translation = <p>{randomCard.russian}</p>;
-  }
   return (
-    <div className={style.container}>
-      {randomCard && (
-        <div className={style.big}>
-          <p>{randomCard.english}</p>
-          <p>{randomCard.transcription}</p>
-          {translation}
-        </div>
-      )}
+    <div className={style.big}>
+      <p>{card.english}</p>
+      <p>{card.transcription}</p>
+      {translation}
     </div>
   );
 }

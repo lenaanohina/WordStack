@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import WordList from "./components/WordList";
-import BigCard from "./components/BigCard";
+import BigCardList from "./components/BigCardList";
 import cardsData from "./cardsData.json";
 
 function App() {
@@ -15,9 +15,12 @@ function App() {
     <div className="App">
       <Header onButtonClick={toggleBigCard}></Header>
       {showBigCard ? (
-        <BigCard cardsData={cardsData} onButtonClick={toggleBigCard}></BigCard>
+        <BigCardList
+          words={cardsData}
+          onButtonClick={toggleBigCard}
+        ></BigCardList>
       ) : (
-        <WordList></WordList>
+        <WordList />
       )}
     </div>
   );
