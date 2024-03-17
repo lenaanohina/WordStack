@@ -1,28 +1,22 @@
-import React, { useState } from "react";
-import "./App.css";
 import Header from "./components/Header";
 import WordList from "./components/WordList";
 import BigCardList from "./components/BigCardList";
 import cardsData from "./cardsData.json";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
-  const [showBigCard, setShowBigCard] = useState(false);
-
-  const toggleBigCard = () => {
-    setShowBigCard(!showBigCard);
-  };
   return (
-    <div className="App">
-      <Header onButtonClick={toggleBigCard}></Header>
-      {showBigCard ? (
-        <BigCardList
-          words={cardsData}
-          onButtonClick={toggleBigCard}
-        ></BigCardList>
-      ) : (
-        <WordList />
-      )}
-    </div>
+    <Router>
+      <div className="app">
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<WordList />} />
+          <Route path="/game" element={<BigCardList words={cardsData} />} />
+          <Route path="*" element={<ErrorMessage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

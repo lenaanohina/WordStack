@@ -4,6 +4,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+  margin-left: 5px;
 }
 .btn_red {
   color: white;
@@ -11,6 +12,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+  margin-left: 5px;
 }
 .btn_green {
   color: white;
@@ -18,4 +20,5 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+  margin-left: 5px;
 }
