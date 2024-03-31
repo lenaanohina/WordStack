@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./BigCard.jsx";
 import style from "./wordCard.module.css";
 
-function BigCard({ card, resetShowTranslation }) {
+function BigCard({ card, resetShowTranslation, incrementWordsLearned }) {
   const [showTranslation, setShowTranslation] = useState(false);
+
+  const buttonRef = useRef(null);
 
   const handleClick = () => {
     setShowTranslation(true);
+    incrementWordsLearned();
   };
 
-  let translation = showTranslation ? (
+  const translation = showTranslation ? (
     <p>{card.russian}</p>
   ) : (
-    <button onClick={handleClick}>Перевод</button>
+    <button ref={buttonRef} onClick={handleClick}>
+      Перевод
+    </button>
   );
 
   useEffect(() => {
@@ -20,6 +25,10 @@ function BigCard({ card, resetShowTranslation }) {
       setShowTranslation(false);
     }
   }, [resetShowTranslation]);
+
+  useEffect(() => {
+    buttonRef.current.focus();
+  }, []);
 
   return (
     <div className={style.big}>

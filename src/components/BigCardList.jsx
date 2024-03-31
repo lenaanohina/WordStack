@@ -5,6 +5,10 @@ import style from "./wordCard.module.css";
 const BigCardList = ({ words }) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [resetShowTranslation, setResetShowTranslation] = useState();
+  const [wordsLearned, setWordsLearned] = useState(0);
+  const incrementWordsLearned = () => {
+    setWordsLearned(wordsLearned + 1);
+  };
 
   const handleNextCard = useCallback(() => {
     setCurrentCardIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -26,9 +30,11 @@ const BigCardList = ({ words }) => {
 
   return (
     <div className={style.container}>
+      <p>Слов изучено за тренировку: {wordsLearned}</p>
       <BigCard
         card={words[currentCardIndex]}
         resetShowTranslation={resetShowTranslation}
+        incrementWordsLearned={incrementWordsLearned}
       />
       <div>
         <button onClick={handlePrevCard}>{"<"}</button>
