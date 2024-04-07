@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/word-stack/static/css/main.6fa4d5ca.css",
-    "main.js": "/word-stack/static/js/main.92a03050.js",
-    "static/media/error.svg": "/word-stack/static/media/error.c986f7504d650174cce057d256e6c3ff.svg",
-    "static/media/logo.svg": "/word-stack/static/media/logo.5122fa1d955a2436a7fdd2361fc7825f.svg",
-    "index.html": "/word-stack/index.html",
-    "main.6fa4d5ca.css.map": "/word-stack/static/css/main.6fa4d5ca.css.map",
-    "main.92a03050.js.map": "/word-stack/static/js/main.92a03050.js.map"
+    "main.css": "/WordStack/static/css/main.6fa4d5ca.css",
+    "main.js": "/WordStack/static/js/main.2559538e.js",
+    "static/media/error.svg": "/WordStack/static/media/error.c986f7504d650174cce057d256e6c3ff.svg",
+    "static/media/logo.svg": "/WordStack/static/media/logo.5122fa1d955a2436a7fdd2361fc7825f.svg",
+    "index.html": "/WordStack/index.html",
+    "main.6fa4d5ca.css.map": "/WordStack/static/css/main.6fa4d5ca.css.map",
+    "main.2559538e.js.map": "/WordStack/static/js/main.2559538e.js.map"
   },
   "entrypoints": [
     "static/css/main.6fa4d5ca.css",
-    "static/js/main.92a03050.js"
+    "static/js/main.2559538e.js"
   ]
 }
