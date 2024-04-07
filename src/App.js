@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header></Header>
+        <Header />
         <Routes>
           <Route path="/" element={<WordList />} />
           <Route path="/game" element={<BigCardList words={cardsData} />} />
