@@ -44,3 +44,27 @@
   z-index: 2000;
   background-color: beige;
 }
+.btn_blue {
+  color: white;
+  background-color: rgb(6, 150, 212);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
+.btn_red {
+  color: white;
+  background-color: rgb(213, 18, 18);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
+.btn_green {
+  color: white;
+  background-color: rgb(14, 180, 50);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
